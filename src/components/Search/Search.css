@@ -1,0 +1,344 @@
+*{
+  box-sizing: border-box;
+}
+
+select {
+  -webkit-appearance: none; 
+  background: url(../../img/Arrow.png) no-repeat right;
+  background-position-x: 370px;
+  background-size: 20px;
+  padding: 11px;
+  font-size: 15px;
+}
+
+#Experience option{
+  width:150px !important;   
+}
+
+input{
+  padding: 11px;
+  font-size: 15px;
+}
+
+.popup{
+    position: fixed;
+    padding: 162px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    opacity: 0;
+    background-color: rgba(0,0,0, .5);
+    overflow-y: auto;
+    max-height: 100%;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+
+.popup__header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup--active{
+    transition: 0.5s all;
+    opacity: 1;
+    pointer-events: all;
+}
+.popup__inner{
+    width: calc(100% - 30px);
+    max-width: 1109px;
+    height: 557px;
+    margin: auto;
+    padding: 25px 25px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.popup__close{
+   display: block;
+   margin-left: auto;
+   cursor: pointer;
+}
+.popup__selector{
+    display: flex;
+    flex-direction: column;
+    margin: 48px 0 0 33px;
+}
+.popup__text{
+    margin-left: 32px;
+    font-size: 24px;
+    line-height: 2.71;
+    letter-spacing: -0.6px;
+    color: #1c1c1c;
+}
+.popup__text--title{
+    margin: 22px 0px 0px 50px;
+    text-transform: capitalize;
+    font-size: 30px;
+    line-height: 1.5;
+    letter-spacing: -0.75px;
+    text-align: left;
+    color: #1c1c1c;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+}
+
+.LeftColumn{
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+}
+
+.RightColumn{
+  display: flex;
+  flex-direction: column;
+  width: 410px;
+}
+
+.checkbox-block{
+  display: inline-block;
+}
+
+.Columns{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Money{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 50px;
+  border-radius: 70px;
+  border: 1px solid gray;
+}
+
+.checkbox-blockInv{
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#Inv{
+  transform:scale(1.3);
+  opacity:0.9;
+  cursor:pointer;
+  margin-right: 10px;
+}
+
+.checkbox-blockDep{
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+#Dep{
+  transform:scale(1.3);
+  opacity:0.9;
+  cursor:pointer;
+  margin-right: 10px;
+}
+
+.Words{
+  margin-bottom: 30px;
+  height: 50px;
+  border-radius: 70px;
+  border: 1px solid gray;
+}
+
+.checkbox-blockTel{
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+#Tel{
+  transform:scale(1.3);
+  opacity:0.9;
+  cursor:pointer;
+  margin-right: 10px;
+}
+
+.checkbox-blockHideVac{
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+#HideVac{
+  transform:scale(1.3);
+  opacity:0.9;
+  cursor:pointer;
+  margin-right: 10px;
+}
+
+.ButtonSeeResult{
+  height: 40px;
+  width: 326px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  background: #FDAE55;
+}
+
+.ButtonSeeResult:hover{
+  cursor: pointer;
+}
+
+.ButtonCancel{
+  height: 40px;
+  width: 326px;
+  border-radius: 20px;
+  font-size: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+}
+
+.ButtonCancel:hover{
+  cursor: pointer;
+}
+
+.ButtonFilters{
+  margin-left: 5px;
+  width: 136px;
+  height: 39px;
+  background: #633E5A;
+  border-radius: 75px;
+  border: none;
+  font-family: 'Franklin Gothic Normal', 'Arial Narrow', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  color: #F9F8F8;
+  cursor: pointer;
+}
+
+.closeimg{
+  width: 40px;
+  height: 40px;
+  margin-right: 50px;
+  margin-top: 22px;
+}
+
+.ButtonFiltersBlock{
+  margin-left: 50px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+body {
+	margin: 0;
+	padding: 30px;
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+
+label {
+	cursor: pointer;
+}
+
+
+.dropdown {
+	position: relative;
+  margin-bottom: 30px;
+}
+
+.dropdown__button {
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: left;
+
+	background: #FFFFFF;
+	height: 50px;
+  border-radius: 70px;
+  border: 1px solid gray;
+
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-left: 20px;
+	padding-right: 35px;
+
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+
+  /* background: url(../../img/Arrow.png) no-repeat right;
+  background-position-x: 370px;
+  background-size: 20px; */
+  padding: 15px;
+	cursor: pointer;
+}
+
+
+.dropdown__input-arrow{
+  position: absolute;
+  right: 19px;
+  bottom: 17px;
+  transition: 0.5s all;
+  width: 19px;
+  height: 11px;
+}
+
+.dropdown__input-arrow-rotate{
+  transform: rotate(180deg);
+  width: 19px;
+  height: 11px;
+}
+
+
+.dropdown__list {
+	display: none;
+
+	position: absolute;
+	left: 0;
+	top: 52px;
+
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	background: #FFFFFF;
+	box-shadow: 0px 4px 8px gray;
+	overflow: hidden;
+
+	border-radius: 15px;
+	width: 100%;
+
+	z-index: 1;
+}
+
+.dropdown__list--visible {
+	display: block;
+}
+
+.dropdown__list-item {
+	margin: 0;
+	padding: 0;
+	border: 1px solid gray;
+	border-bottom: 0px;
+	padding: 8px 15px;
+	cursor: pointer;
+}
+
+.dropdown__list-item:first-child {
+	border-radius: 15px 15px 0 0;
+}
+
+.dropdown__list-item:last-child {
+	border-radius: 0 0 15px 15px;
+	border-bottom: 1px solid gray;
+}
+
+.dropdown__list-item:hover {
+	background: rgba(253, 174, 85, 0.26);
+}
+
+.dropdown__input-hidden {
+	display: none;
+}
+
+.dropdown:first-child {
+	margin-top: 30px;
+}
+
+.closeimg:hover{
+  cursor: pointer;
+}
